@@ -143,7 +143,7 @@
             <div class="col-md-4 col-xs-12 mb-30" style="float: right;">
             <div class="portfolio-card"><a class="portfolio-thumb"><img src="img/marrow.jpg" alt="Marrow Cover"></a>
               <div class="portfolio-card-body">
-                <h5 class="portfolio-title">Marrow</h5><p>To order, use the Contact Form below.</p>
+                <h5 class="portfolio-title">Marrow</h5><p>To order, use the Contact Form below. All proceeds except shipping will be donated to St. Jude Children's Research Hospital.</p>
               </div>
             </div>
           </div>
@@ -220,32 +220,72 @@
     <section class="bg-secondary bg-cover bg-no-repeat pt-5 pb-4" style="background-image: url(img/homepages/freelancer-portfolio/contacts-bg.png);" data-offset-top="-10" id="contacts">
       <div class="container py-2">
         <h2 id="contactform" class="h3 block-title text-center">Contact Sabne Raznik <small class="font-weight-medium">regarding book reviews or other work queries. She usually responds within one (1) week.</small></h2>
-        <form class="needs-validation pt-4 pb-5" novalidate>
-          <div class="row">
-            <div class="col-md-4 col-sm-6 form-group">
-              <label for="cont-name">Your Name <span class='text-danger font-weight-medium'>*</span></label>
-              <input class="form-control" type="text" id="cont-name" placeholder="John Doe" required>
-              <div class="invalid-feedback">Please fill in your name!</div>
+        <form id="contact-form" method="post" action="php/contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6 form-group">
-              <label for="cont-email">Email Address <span class='text-danger font-weight-medium'>*</span></label>
-              <input class="form-control" type="email" id="cont-email" placeholder="johndoe@example.com" required>
-              <div class="invalid-feedback">Please provide valid email address!</div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
-            <div class="col-md-4 form-group">
-              <label for="cont-subject">Subject</label>
-              <input class="form-control" type="email" id="cont-subject" placeholder="Title of your message">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="cont-message">Message <span class='text-danger font-weight-medium'>*</span></label>
-            <textarea class="form-control" id="cont-message" rows="8" placeholder="Type your message..." required></textarea>
-            <div class="invalid-feedback">Please type your message!</div>
-          </div>
-          <div class="text-center">
-            <button class="btn btn-style-4 btn-icon-left btn-gradient" type="submit"><i class="fe-icon-mail text-md"></i>Send Message</button>
-          </div>
-        </form>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Please specify your need *</label>
+                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="Request quotation">Request a Book Review</option>
+                        <option value="Request order status">Request a Reading or an Editorial or Proofreading Service</option>
+                        <option value="Request copy of an invoice">Request a Copy or Copies of Marrow</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+                    <strong>*</strong> These fields are required. Contact form template by
+                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+            </div>
+        </div>
+    </div>
+
+</form>
         <hr>
         <div class="d-md-flex justify-content-between align-items-center pt-4 text-center text-md-left">
           <div class="order-2"><a class="social-btn sb-style-6 sb-facebook" href="https://www.facebook.com/sabneraznik/"><i class="socicon-facebook"></i></a><a class="social-btn sb-style-6 sb-linkedin" href="https://www.linkedin.com/in/sabneraznik/"><i class="socicon-linkedin"></i></a><a class="social-btn sb-style-6 sb-youtube" href="https://www.youtube.com/channel/UCxtmPHopi2cvhUfICpcOW5A?view_as=subscriber"><i class="socicon-youtube"></i></a><a class="social-btn sb-style-6 sb-instagram" href="https://www.instagram.com/sabneraznik/"><i class="socicon-instagram"></i></a><a class="social-btn sb-style-6 sb-blogger" href="https://sabneraznik.blogspot.com/"><i class="socicon-blogger"></i></a><a class="social-btn sb-style-6 sb-goodreads" href="https://www.goodreads.com/author/show/6190999.Sabne_Raznik"><i class="socicon-goodreads"></i></a></div>
